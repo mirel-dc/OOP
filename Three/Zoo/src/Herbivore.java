@@ -15,4 +15,9 @@ public class Herbivore extends Animal {
     public void voice() {
         System.out.println(name + " makes cute sound");
     }
+
+    @Override
+    public String toString() {
+        return "Herbivore " + name;
+    }
 }

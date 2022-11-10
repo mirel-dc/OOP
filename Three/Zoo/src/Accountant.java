@@ -5,7 +5,11 @@ public class Accountant extends Employee {
     }
 
     void getBalance(Animal[] animals) {
-
+        // TODO Balance
     };
 
+    @Override
+    public String toString() {
+        return "Accountant " + name;
+    }
 }

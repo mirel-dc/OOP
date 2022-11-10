@@ -14,4 +14,9 @@ public class Predator extends Animal {
     public void voice() {
         System.out.println(name + " makes agressive sound");
     }
+
+    @Override
+    public String toString() {
+        return "Predator " + name;
+    }
 }

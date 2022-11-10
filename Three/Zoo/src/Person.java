@@ -13,4 +13,9 @@ public abstract class Person implements Walker, Speaker {
     public void speak() {
         System.out.println(name + " speaks");
     }
+
+    @Override
+    public String toString() {
+        return "Person " + name;
+    }
 }

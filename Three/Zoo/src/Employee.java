@@ -8,4 +8,9 @@ public class Employee extends Person {
     public void speak() {
         System.out.println(name + " speaks with Animals");
     }
+
+    @Override
+    public String toString() {
+        return "Employee " + name;
+    }
 }
