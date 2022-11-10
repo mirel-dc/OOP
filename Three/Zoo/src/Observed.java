@@ -1,3 +1,7 @@
 public interface Observed {
-    // TODO make observed
+    public void addObserver(Visitor visitor);
+
+    public void removeObserver(Visitor visitor);
+
+    public void notifyObserver();
 }

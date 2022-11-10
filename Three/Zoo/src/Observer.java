@@ -1,3 +1,3 @@
 public interface Observer {
-    // TODO make observer
+    public void handleEvent();
 }

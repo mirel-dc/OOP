@@ -1,6 +1,5 @@
 public abstract class Person implements Walker, Speaker {
     protected String name;
-    protected HumanType humanType;
 
     Person(String name) {
         this.name = name;

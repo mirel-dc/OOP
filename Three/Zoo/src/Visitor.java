@@ -7,7 +7,6 @@ public class Visitor extends Person implements Observer {
 
     Visitor(String name) {
         super(name);
-        humanType = HumanType.VISITOR;
     }
 
     @Override
@@ -28,5 +27,11 @@ public class Visitor extends Person implements Observer {
     @Override
     public String toString() {
         return "Visitor " + name;
+    }
+
+    @Override
+    public void handleEvent() {
+        System.out.println(name + "! We have changes in our ZOO ");
+        Zoo.animalsOut();
     }
 }
