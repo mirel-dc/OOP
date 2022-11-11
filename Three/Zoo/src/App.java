@@ -1,22 +1,51 @@
+import java.util.Scanner;
+
 public class App {
     public static void main(String[] args) throws Exception {
         Zoo zoo = new Zoo();
+        Scanner in = new Scanner(System.in);
+        int key;
+        while (true) {
+            System.out.println("Choose object to work with: ");
+            System.out.println("1: Human");
+            System.out.println("2: Animals");
+            System.out.println("0: Break");
+            key = in.nextInt();
+            switch (key) {
+                case 1: // TODO Доделать выходы, 0=брейк
+                    while (true) {
+                        System.out.println("1: Visitor");
+                        System.out.println("2: Employee");
+                        System.out.println("3: Accountant");
+                        key = in.nextInt();
+                        switch (key) {
+                            case 1:
+                                while (true) {
 
-        // Visitor vanya = new Visitor("Vanya");
-        // Employee nadya = new Employee("Nadya");
+                                }
+                                break;
+                            case 2:
 
-        // Predator tiger = new Predator("Tiger");
-        // Herbivore cow = new Herbivore("Cow");
-        // Animal cat = new Predator("Cat");
+                                break;
+                            case 3:
 
-        // zoo.addAnimal(cat);
-        // zoo.addAnimal(tiger);
-        // zoo.addAnimal(cow);
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                    break;
+                case 2:
 
-        // zoo.animalsOut();
+                case 0:
+                    break;
 
-        // Accountant zina = new Accountant("Zina");
-        // zina.getBalance(Zoo.getAnimals());
+                default:
+                    System.out.println("Wrong");
+                    break;
+            }
+        }
+
     }
 }
 
@@ -32,11 +61,11 @@ public class App {
 // + Существует класс Бухгалтера, который имеет метод getBalance(Animal[]
 // animals) – принимает массив животных и печатает в консоль, сколько из них
 // хищных и травоядных
-// FIXME- В Zoo есть две клетки (класс Cage) которые наполняются животными:
+// - В Zoo есть две клетки (класс Cage) которые наполняются животными:
 // хищные
 // отдельно, травоядные отдельно. Для добавления животного должны быть
 // реализованы методы в Zoo.
-// TODO- В программе должен быть реализован паттерн Observer (Наблюдатель).
+// - В программе должен быть реализован паттерн Observer (Наблюдатель).
 // Подумайте сами, какие интерфейсы нужно создать и какие классы будут их
 // реализовывать. Реализация на ваше усмотрение.
 // TODO- Программа должна иметь консольное управление. Наполнение программы

@@ -20,4 +20,18 @@ public class Cage {
             cagePred.remove(animal);
         }
     }
+
+    private static void get(List<Animal> list) {
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println(String.valueOf(i + 1) + " " + list.get(i));
+        }
+    }
+
+    public static void getHerbCage() {
+        get(cageHerb);
+    };
+
+    public static void getPredCage() {
+        get(cagePred);
+    }
 }
