@@ -5,10 +5,12 @@ public abstract class Person implements Walker, Speaker {
         this.name = name;
     }
 
+    @Override
     public void walk() {
         System.out.println(name + " makes a step");
     }
 
+    @Override
     public void speak() {
         System.out.println(name + " speaks");
     }

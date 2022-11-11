@@ -20,6 +20,11 @@ public class Accountant extends Employee {
     };
 
     @Override
+    public void speak() {
+        System.out.println(name + " speaks with computer");
+    }
+
+    @Override
     public String toString() {
         return "Accountant " + name;
     }

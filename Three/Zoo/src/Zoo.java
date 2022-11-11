@@ -24,7 +24,7 @@ public class Zoo implements Observed {
 
     @Override
     public void removeObserver(Visitor visitor) {
-        obs.add(visitor);
+        obs.remove(visitor);
     }
 
     @Override

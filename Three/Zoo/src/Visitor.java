@@ -3,8 +3,6 @@ import java.util.ArrayList;
 
 public class Visitor extends Person implements Observer {
 
-    private static List<Visitor> visitors = new ArrayList<Visitor>();
-
     Visitor(String name) {
         super(name);
     }
@@ -14,8 +12,14 @@ public class Visitor extends Person implements Observer {
         System.out.println(name + " speaks with Visitors");
     }
 
-    public void addVisitor(Visitor visitor) {
+    public static List<Visitor> visitors = new ArrayList<Visitor>();
+
+    public static void addVisitor(Visitor visitor) {
         visitors.add(visitor);
+    }
+
+    public void removeVisitor(Visitor visitor) {
+        visitors.remove(visitor);
     }
 
     public static void visitorsOut() {

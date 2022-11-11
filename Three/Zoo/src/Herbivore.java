@@ -18,6 +18,6 @@ public class Herbivore extends Animal {
 
     @Override
     public String toString() {
-        return name;
+        return "Herbivore" + name;
     }
 }
