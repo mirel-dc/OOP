@@ -8,6 +8,8 @@ public class App {
         int key, i;
         String name;
 
+        Accountant accountant = new Accountant("temp");
+
         Herbivore cow = new Herbivore("Cow");
         Herbivore monkey = new Herbivore("Monkey");
         Herbivore elephant = new Herbivore("Elephant");
@@ -48,7 +50,7 @@ public class App {
                     while (true) {
                         System.out.println("1: Visitor");
                         System.out.println("2: Employee");
-                        // TODO System.out.println("3: Accountant");
+                        System.out.println("3: Accountant");
                         System.out.println("0: Back");
                         key = in.nextInt();
                         if (key == 0)
@@ -110,7 +112,6 @@ public class App {
                             case 2:
                                 System.out.println("1: Add employee");
                                 System.out.println("2: Choose employee");
-                                // TODO System.out.println("3: Accountant");
                                 System.out.println("0: Back");
                                 key = in.nextInt();
                                 if (key == 0)
@@ -127,8 +128,11 @@ public class App {
                                         if (i == 0)
                                             break;
                                         while (true) {
-                                            System.out.println("1: speak");
-                                            System.out.println("2: walk");
+                                            System.out.println("1: Speak");
+                                            System.out.println("2: Walk");
+                                            if (Employee.employees.get(i - 1) instanceof Accountant) {
+                                                System.out.println("3: Get balance");
+                                            }
                                             key = in.nextInt();
                                             if (key == 0)
                                                 break;
@@ -139,6 +143,12 @@ public class App {
                                                 case 2:
                                                     Employee.employees.get(i - 1).walk();
                                                     break;
+                                                case 3:
+                                                    if (Employee.employees.get(i - 1) instanceof Accountant) {
+                                                        accountant = (Accountant) Employee.employees.get(i - 1);
+                                                        accountant.getBalance(zoo.getAnimals());
+                                                    } else
+                                                        break;
                                                 default:
                                                     break;
                                             }
@@ -169,9 +179,9 @@ public class App {
                                         if (i == 0)
                                             break;
                                         while (true) {
-                                            System.out.println("1: speak");
-                                            System.out.println("2: walk");
-                                            System.out.println("3: get balance");
+                                            System.out.println("1: Speak");
+                                            System.out.println("2: Walk");
+                                            System.out.println("3: Get balance");
                                             key = in.nextInt();
                                             if (key == 0)
                                                 break;
@@ -182,8 +192,9 @@ public class App {
                                                 case 2:
                                                     Employee.employees.get(i - 1).walk();
                                                     break;
-                                                case 3:
-                                                    // FIXME (Accountant)Employee.employees.get(i - 1).getBalance();
+                                                case 3:// FIXME
+                                                    accountant = (Accountant) Employee.employees.get(i - 1);
+                                                    accountant.getBalance(zoo.getAnimals());
                                                 default:
                                                     break;
                                             }

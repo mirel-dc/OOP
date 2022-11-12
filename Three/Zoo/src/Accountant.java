@@ -17,6 +17,8 @@ public class Accountant extends Employee {
             }
         }
         System.out.println("There is " + herbCount + " Herbivore and " + predCount + " Predators in our ZOO");
+        herbCount = 0;
+        predCount = 0;
     };
 
     public static void accountantOut() {
