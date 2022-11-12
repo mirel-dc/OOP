@@ -159,7 +159,7 @@ public class App {
                                 }
                                 break;
 
-                            // TODO Accountant block
+                            // Accountant block
                             case 3:
                                 System.out.println("1: Add accountant");
                                 System.out.println("2: Choose accountant");
@@ -192,7 +192,7 @@ public class App {
                                                 case 2:
                                                     Employee.employees.get(i - 1).walk();
                                                     break;
-                                                case 3:// FIXME
+                                                case 3:
                                                     accountant = (Accountant) Employee.employees.get(i - 1);
                                                     accountant.getBalance(zoo.getAnimals());
                                                 default:
@@ -331,25 +331,3 @@ public class App {
         }
     }
 }
-
-// TODOLIST
-// FIXME~ В программе должны быть реализованы интерфейсы Walker, Voicer,
-// Speeker.
-// + В модели есть люди: посетители и сотрудники, наследующие класс Person и
-// реализующие интерфейсы Walker, Speeker.
-// + В модели есть животные, наследующие класс Animal и реализующие интерфейсы
-// Walker, Voicer.
-// + Также для животных введено enum-перечисление с типами животных HERBIVORE и
-// PREDATOR и соответствующие классы AnimalPredator, AnimalHerbivore
-// + Существует класс Бухгалтера, который имеет метод getBalance(Animal[]
-// animals) – принимает массив животных и печатает в консоль, сколько из них
-// хищных и травоядных
-// - В Zoo есть две клетки (класс Cage) которые наполняются животными:
-// хищные
-// отдельно, травоядные отдельно. Для добавления животного должны быть
-// реализованы методы в Zoo.
-// - В программе должен быть реализован паттерн Observer (Наблюдатель).
-// Подумайте сами, какие интерфейсы нужно создать и какие классы будут их
-// реализовывать. Реализация на ваше усмотрение.
-// TODO- Программа должна иметь консольное управление. Наполнение программы
-// разработать самостоятельно.
