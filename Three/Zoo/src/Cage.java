@@ -27,11 +27,19 @@ public class Cage {
         }
     }
 
-    public static void getHerbCage() {
+    public static List<Animal> getHerbCage() {
+        return cageHerb;
+    };
+
+    public static void outHerbCage() {
         get(cageHerb);
     };
 
-    public static void getPredCage() {
+    public static List<Animal> getPredCage() {
+        return cagePred;
+    }
+
+    public static void outPredCage() {
         get(cagePred);
     }
 }

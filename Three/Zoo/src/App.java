@@ -151,16 +151,167 @@ public class App {
 
                             // TODO Accountant block
                             case 3:
+                                System.out.println("1: Add accountant");
+                                System.out.println("2: Choose accountant");
+                                System.out.println("0: Back");
+                                key = in.nextInt();
+                                if (key == 0)
+                                    break;
+                                switch (key) {
+                                    case 1:
+                                        System.out.println("Enter name please: ");
+                                        name = in.next();
+                                        Employee.addEmployee(new Accountant(name));
+                                        break;
+                                    case 2:
+                                        Accountant.accountantOut();
+                                        i = in.nextInt();
+                                        if (i == 0)
+                                            break;
+                                        while (true) {
+                                            System.out.println("1: speak");
+                                            System.out.println("2: walk");
+                                            System.out.println("3: get balance");
+                                            key = in.nextInt();
+                                            if (key == 0)
+                                                break;
+                                            switch (key) {
+                                                case 1:
+                                                    Employee.employees.get(i - 1).speak();
+                                                    break;
+                                                case 2:
+                                                    Employee.employees.get(i - 1).walk();
+                                                    break;
+                                                case 3:
+                                                    // FIXME (Accountant)Employee.employees.get(i - 1).getBalance();
+                                                default:
+                                                    break;
+                                            }
+                                            break;
+                                        }
+                                    default:
+                                        break;
+                                }
                                 break;
 
                             default:
                                 break;
                         }
                     }
-                    // TODO Animal block
-                case 2:
-                    break;
 
+                    // Animal block
+                case 2:
+                    while (true) {
+                        System.out.println("1: Predator");
+                        System.out.println("2: Herbivore");
+                        System.out.println("0: Back");
+                        key = in.nextInt();
+                        if (key == 0)
+                            break;
+                        switch (key) {
+
+                            // Predator block
+                            case 1:
+                                while (true) {
+                                    System.out.println("1: Add predator");
+                                    System.out.println("2: Choose predator");
+                                    System.out.println("3: Cage");
+                                    System.out.println("0: Back");
+                                    key = in.nextInt();
+                                    if (key == 0)
+                                        break;
+                                    switch (key) {
+                                        case 1:
+                                            System.out.println("Enter name please: ");
+                                            name = in.next();
+                                            zoo.addAnimal(new Predator(name));
+                                            break;
+                                        case 2:
+                                            Cage.outPredCage();
+                                            i = in.nextInt();
+                                            if (i == 0)
+                                                break;
+                                            while (true) {
+                                                System.out.println("1: Voice");
+                                                System.out.println("2: Walk");
+                                                key = in.nextInt();
+                                                if (key == 0)
+                                                    break;
+                                                switch (key) {
+                                                    case 1:
+                                                        Cage.getPredCage().get(i - 1).voice();
+                                                        break;
+                                                    case 2:
+                                                        Cage.getPredCage().get(i - 1).walk();
+                                                        break;
+                                                    default:
+                                                        break;
+                                                }
+                                                break;
+                                            }
+                                            break;
+                                        case 3:
+                                            Cage.outPredCage();
+                                            break;
+                                        default:
+                                            break;
+                                    }
+                                }
+                                break;
+
+                            // Herbivore block
+                            case 2:
+                                while (true) {
+                                    System.out.println("1: Add Herbivore");
+                                    System.out.println("2: Choose Herbivore");
+                                    System.out.println("3: Cage");
+                                    System.out.println("0: Back");
+                                    key = in.nextInt();
+                                    if (key == 0)
+                                        break;
+                                    switch (key) {
+                                        case 1:
+                                            System.out.println("Enter name please: ");
+                                            name = in.next();
+                                            zoo.addAnimal(new Herbivore(name));
+                                            break;
+                                        case 2:
+                                            Cage.outHerbCage();
+                                            i = in.nextInt();
+                                            if (i == 0)
+                                                break;
+                                            while (true) {
+                                                System.out.println("1: Voice");
+                                                System.out.println("2: Walk");
+                                                key = in.nextInt();
+                                                if (key == 0)
+                                                    break;
+                                                switch (key) {
+                                                    case 1:
+                                                        Cage.getHerbCage().get(i - 1).voice();
+                                                        break;
+                                                    case 2:
+                                                        Cage.getHerbCage().get(i - 1).walk();
+                                                        break;
+                                                    default:
+                                                        break;
+                                                }
+                                                break;
+                                            }
+                                            break;
+                                        case 3:
+                                            Cage.outHerbCage();
+                                            break;
+                                        default:
+                                            break;
+                                    }
+                                }
+                                break;
+
+                            default:
+                                break;
+                        }
+                    }
                 default:
                     System.out.println("Wrong");
                     break;

@@ -19,6 +19,14 @@ public class Accountant extends Employee {
         System.out.println("There is " + herbCount + " Herbivore and " + predCount + " Predators in our ZOO");
     };
 
+    public static void accountantOut() {
+        for (int i = 0; i < employees.size(); i++) {
+            if (employees.get(i) instanceof Accountant) {
+                System.out.println(String.valueOf(i + 1) + " " + employees.get(i));
+            }
+        }
+    }
+
     @Override
     public void speak() {
         System.out.println(name + " speaks with computer");

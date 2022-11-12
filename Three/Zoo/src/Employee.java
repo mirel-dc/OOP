@@ -2,8 +2,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Employee extends Person {
-    public static List<Visitor> visitors = new ArrayList<Visitor>();
-
     Employee(String name) {
         super(name);
     }
