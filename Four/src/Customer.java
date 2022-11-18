@@ -17,7 +17,7 @@ public class Customer implements Comparable<Customer> {
     @Override
     public String toString() {
         if (name != null)
-            return "id=" + id + ", name=" + name + ", balance=" + balance;
+            return "Customer: id=" + id + ", name=" + name + ", balance=" + balance;
         else
             return "No such customer";
     }
