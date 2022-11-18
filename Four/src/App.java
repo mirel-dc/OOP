@@ -9,12 +9,14 @@ public class App {
         System.out.println(bank.addCustomer("zdfg", 157));
         System.out.println(bank.addCustomer("rgx", 35));
         System.out.println(bank.addCustomer("axvd", 300));
+        System.out.println(bank.addCustomer("axgg", 120));
 
         // System.out.println(bank.getCustomers());
         // Collections.sort(bank.getCustomers(), new BalanceComparator());
         // System.out.println(bank.getCustomers());
 
-        System.out.println(bank.getCustomerByName("a"));
+        System.out.println(bank.getCustomerByName("ax"));
+        System.out.println(bank.getCustomerByName("g"));
     }
 }
 // https://drive.google.com/file/d/1jk3zGRsN3mfw9CffMUJQuf7uR6sb13qO/view

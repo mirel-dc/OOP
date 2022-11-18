@@ -6,7 +6,8 @@ public class addCustomer implements Command {
     }
 
     @Override
-    public void execute() {
+    public void execute<String,int>(String s,int)
+    {
         bank.addCustomer(null, 0)
     }
 }

@@ -1,3 +1,3 @@
 public interface Command {
-    public void execute();
+    public <T, S> void execute(T t, S s);
 }

@@ -6,6 +6,7 @@ import java.util.UUID;
 
 public class Bank {
     private List<Customer> customers = new ArrayList<>();
+    // private List<Customer> customersByName = new ArrayList<>();
     private Queue<Transaction> transactions = new LinkedList<>();
 
     Customer addCustomer(String name, int balance) {
@@ -26,23 +27,38 @@ public class Bank {
     }
 
     List<Customer> getCustomerByName(String name) {
-        Bank bank = new Bank();
-        List<Customer> containsName = new ArrayList<>();
-
-        for (int i = 0; i < bank.getCustomers().size(); i++) {
-            if (bank.getCustomers().get(i).name.contains(name)) {
-                containsName.add(bank.getCustomers().get(i));
+        // customersByName.clear();
+        List<Customer> customersByName = new ArrayList<>();
+        for (int i = 0; i < customers.size(); i++) {
+            if (customers.get(i).name.contains(name)) {
+                customersByName.add(customers.get(i));
             }
         }
+        return customersByName;
+    }
 
-        // for (Customer customer : bank.getCustomers()) {
-        // if (customer.name.contains(name)) {
-        // containsName.add(customer);
-        // System.out.println(customer);
-        // }
-        // }
+    Customer getCUstomerById(UUID id) {
+        for (Customer customer : customers) {
+            if (customer.id == id) {
+                return customer;
+            }
+        }
+        return new Customer();
+    }
 
-        return containsName;
+    boolean addTransacton(Transaction transaction) throws CustomerNotFoundException{
+        Customer custFrom,custTo=new Customer();
+        try {
+            for (Customer customer : customers) {
+                if(customer.id==transaction.fromCustomer){
+                    customers.
+                }
+            }
+            throw new CustomerNotFoundException();
+        } catch (CustomerNotFoundException e) {
+            System.out.println(e);
+        }
+        return false;
     }
 
     public List<Customer> getCustomers() {
