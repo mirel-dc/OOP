@@ -82,7 +82,7 @@ public class Bank {
             if (check != 2) {
                 throw new CustomerNotFoundException();
             }
-            transactions.offer(transaction);
+            transactions.add(transaction);
             return true;
         } catch (CustomerNotFoundException e) {
             System.out.println(e);
